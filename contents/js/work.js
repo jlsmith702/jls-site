@@ -72,8 +72,13 @@ export default function bindProjects(args) {
 			clone.querySelector('.title').style.minWidth = `${mediaEl.offsetWidth}px`;
 		}
 		// Determine if we have embed
-		if( project.querySelector('.embed') ) {
+		const embedText = project.querySelector('script[type="x-embed"]');
+		if( embedText ) {
 			clone.classList.add('has-embed');
+			const embedEl = document.createElement('div');
+			embedEl.classList.add('embed');
+			embedEl.innerHTML = embedText.innerHTML;
+			clone.querySelector('.title').insertBefore( embedEl, clone.querySelector('.preview') );
 		}
 		// Set starting position
 		const projectRect = project.getBoundingClientRect();
