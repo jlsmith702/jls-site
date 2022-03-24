@@ -57,6 +57,7 @@ monospace;
 
 @mixin button {
    appearance: none;
+   -webkit-appearance: none;
    border: none;
    background: none;
    font-family: $font-stack-mono;

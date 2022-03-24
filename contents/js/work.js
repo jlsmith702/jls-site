@@ -93,11 +93,17 @@ export default function bindProjects(args) {
 			const projectHeight = heightOverride !== false ? heightOverride : clone.offsetHeight;
 			const bodyWidth = window.visualViewport.width;
 			const bodyHeight = window.visualViewport.height;
-			const endingLeft = bodyWidth / 2 - projectWidth / 2;
+			let smallScreen = false;
+			let endingLeft = bodyWidth / 2 - projectWidth / 2;
+			if( projectWidth === bodyWidth ) {
+				endingLeft = projectRect.left;
+				smallScreen = true;
+			}
 			const endingTop = bodyHeight / 2 - projectHeight / 2;
 			return {
 				left: endingLeft,
 				top: endingTop,
+				smallScreen: smallScreen
 			};
 		}
 
@@ -135,7 +141,9 @@ export default function bindProjects(args) {
 				clone.style.opacity = null;
 				clone.style.left = `${endPos.left}px`;
 				clone.style.top = `${endPos.top}px`;
-				clone.style.width = `${cloneInitialWidth}px`;
+				if( ! endPos.smallScreen ) {
+					clone.style.width = `${cloneInitialWidth}px`;
+				}
 				clone.style.height = `${cloneInitialHeight}px`;
 			}, 10);
 			setTimeout(() => {
@@ -158,10 +166,15 @@ export default function bindProjects(args) {
 				closeProject();
 			});
 		}
+		
 		// Set timeout so that we properly register the correct expanded dimensions
-		setTimeout(() => {
-			setPosition();
+		const cloneCheck = setInterval(() => {
+			if( project.parentNode.querySelector('.clone') ) {
+				clearInterval(cloneCheck);
+				setPosition();
+			}
 		}, 20);
+		
 	}
 
 	workItems.forEach(item => {

@@ -74,6 +74,7 @@ $item-padding-medium: 3rem;
 		 margin-bottom: 0.3rem;
 		 button {
 			@include button;
+			color: $text-color;
 			background-color: #eee;
 			border-radius: 100px;
 			padding: 0.2rem 0.8rem;
@@ -139,12 +140,18 @@ $item-padding-medium: 3rem;
 		 @include medium-screen {
 			padding: #{ $item-padding-medium / 2};
 		 }
+		 
+		 @include small-screen-only {
+			 .title, .content {
+				 width: 100%;
+			 }
+		 }
 
 		 .title {
 			.category {
 			   font-family: $font-stack-mono;
 			   font-weight: 400;
-			   font-size: 0.85rem;
+			   font-size: 0.9rem;
 			}
 			.preview, .embed {
 			   img {
@@ -154,13 +161,16 @@ $item-padding-medium: 3rem;
 			   }
 			   margin-bottom: 1rem;
 			}
+			@include small-screen-only {
+				margin-bottom: 0.5rem;
+			}
 		 }
 		 .content {
 			display: none;
 			h3 {
 				font-family: $font-stack-mono;
 				font-weight: 700;
-				font-size: 1rem;
+				font-size: 0.9rem;
 			}
 			p {
 				font-size: 1rem;
@@ -177,10 +187,11 @@ $item-padding-medium: 3rem;
 		 &.clone {
 			align-items: center;
 			opacity: 1; // for fade out
+			max-height: 70vh;
+			overflow-y: scroll;
 			@include medium-screen {
 			width: $wrapper-width;
 			max-width: $wrapper-max;
-			   
 			}
 			
 			.title {
