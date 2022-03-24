@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		{{#if id === home}}
+		<title>{{title}}</title>
+		{{#else}}
+		<title>{{title}} – Jessy Lauren Smith</title>
+		{{/if}}
+		<link rel="stylesheet" type="text/css" href="{{siteBase}}/style.min.css" />
+		<meta name="robots" content="noindex">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+	<body id="{{id}}">
+	<div id="wrapper">
+		<div id="site-header-wrap">
+			<header id="site-header" class="container wide">
+				<span id="site-title">
+					<a href="{{siteBase}}">Jessy Lauren Smith</a>
+				</span>
+				<nav id="site-nav">
+					<ul>
+						<li><a href="{{siteBase}}/#work">Work</a></li>
+						<li><a href="{{siteBase}}/about">About</a></li>
+					</ul>
+				</nav>
+			</header>
+		</div>

@@ -1,0 +1,19 @@
+<li class="item" data-category="{{category}}">
+	<div class="title">
+		{{#if image}}
+		<div class="preview">
+			<img src="{{siteBase}}{{image}}" alt="{{title}}" />
+		</div>
+		{{/if}}
+		{{#if embed}}
+		<div class="embed">
+			{{embed}}
+		</div>
+		{{/if}}
+		<h3>{{title}}</h3>
+		<h4 class="category">{{category}}</h4>
+	</div>
+	<div class="content">
+		{{content}}
+	</div>
+</li>

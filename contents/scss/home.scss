@@ -1,0 +1,238 @@
+#home-header {
+   background-image: url('./scss/home-header.jpg');
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   min-height: 600px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 2.5rem;
+   margin-bottom: 3rem;
+   .container {
+	   padding-top: 0;
+   }
+   @include small-screen-only {
+	  min-height: auto;
+	  padding: 4rem 0;
+	  min-height: 400px;
+   }
+   h1 {
+	  color: #d7d7d7;
+	  font-weight: 400;
+	  font-size: 2rem;
+	  line-height: 1.25;
+	  mix-blend-mode: color-dodge;
+	  @include medium-screen {
+		 font-size: 3rem;
+	  }
+	  @include large-screen {
+		  font-size: 3.25rem;
+	  }
+	  em,
+	  strong {
+		 font-weight: 700;
+		 font-style: normal;
+	  }
+   }
+   &.parallax {
+	   position: fixed;
+   }
+}
+
+#home-parallax-wrap {
+	position: relative;
+	background-color: white;
+	main.container {
+		padding-top: 3rem;
+	}
+}
+
+#intro {
+   p {
+	  font-size: 1.15rem;
+	  line-height: 1.55;
+   }
+   margin-bottom: 3rem;
+}
+
+#home h2 {
+	@include text-heading;
+}
+
+$item-padding: 1.67rem;
+$item-padding-medium: 3rem;
+
+#work {
+   #filters {
+	  display: flex;
+	  flex-wrap: wrap;
+	  padding: 0;
+
+	  li {
+		 list-style: none;
+		 margin-bottom: 0.3rem;
+		 button {
+			@include button;
+			background-color: #eee;
+			border-radius: 100px;
+			padding: 0.2rem 0.8rem;
+			margin-right: 1rem;
+			font-size: 0.8rem;
+			&:active {
+			   background-color: #ddd;
+			   color: inherit;
+			}
+			&.active {
+			   background-color: #333;
+			   color: white;
+			}
+		 }
+	  }
+   }
+
+   $item-overlay-color: rgba(240, 240, 240, 0.9);
+
+   #items {
+	  display: flex;
+	  flex-wrap: wrap;
+	  padding: 0;
+	  margin-left: #{ ($item-padding / 2) * -1};
+	  width: calc( 100% + #{ $item-padding } );
+	  @include medium-screen {
+		 margin-left: #{ ($item-padding-medium / 2) * -1};
+		 width: calc( 100% + #{ $item-padding-medium } );         
+	  }
+	  .overlay {
+		 position: fixed;
+		 background-color: $item-overlay-color;
+		 z-index: 40;
+		 width: 100vw;
+		 height: 100vh;
+		 top: 0;
+		 left: 0;
+		 opacity: 0;
+		 transition: opacity 0.3s ease;
+
+		 &.fade-in {
+			opacity: 1;
+		 }
+
+		 &.fade-out {
+			opacity: 0;
+		 }
+	  }
+
+	  .item {
+		 width: 100%;
+		 display: flex;
+		 flex-wrap: wrap;
+		 @include medium-screen {
+			width: 50%;
+			flex-wrap: nowrap;
+		 }
+
+		 list-style: none;
+		 padding: #{ $item-padding / 2};
+		 background-color: white;
+		 transform: scale(1);
+		 @include medium-screen {
+			padding: #{ $item-padding-medium / 2};
+		 }
+
+		 .title {
+			.category {
+			   font-family: $font-stack-mono;
+			   font-weight: 400;
+			   font-size: 0.85rem;
+			}
+			.preview, .embed {
+			   img {
+				  display: block;
+				  max-width: 100%;
+				  height: auto;
+			   }
+			   margin-bottom: 1rem;
+			}
+		 }
+		 .content {
+			display: none;
+			h3 {
+				font-family: $font-stack-mono;
+				font-weight: 700;
+				font-size: 1rem;
+			}
+			p {
+				font-size: 1rem;
+			}
+		 }
+		 .embed {
+			display: none;
+		 }
+
+		 &:not(.clone) {
+			transition: background-color 0.3s ease;
+		 }
+
+		 &.clone {
+			align-items: center;
+			opacity: 1; // for fade out
+			@include medium-screen {
+			width: $wrapper-width;
+			max-width: $wrapper-max;
+			   
+			}
+			
+			.title {
+			   max-width: 50%;
+			   flex-grow: 0;
+			   flex-shrink: 0;
+			   @include medium-screen {
+				  margin-right: 2rem;
+			   }
+			}
+
+			.content {
+			   display: block;
+			   transition: opacity 0.4s ease;
+			   opacity: 0;
+			   min-width: 300px;
+			   flex-basis: 50%;
+			}
+
+			&.expand {
+			   transition: top 0.45s ease, left 0.45s ease, width 0.45s ease, height 0.45s ease;
+			}
+
+			&.open {
+			   background-color: rgba(255, 255, 255, 1);
+
+			   .content {
+				  opacity: 1;
+			   }
+			   
+			}
+			
+			&.has-embed {
+			   .preview {
+				  display: none;
+			   }
+			   .embed {
+				  display: block;
+			   }
+			}
+			
+			&.fade-out {
+			   transition: 0.3s ease;
+			   opacity: 0;
+			}
+			
+		 }
+
+		 &:not(.clone):hover {
+			background-color: $item-overlay-color;
+			cursor: pointer;
+		 }
+	  }
+   }
+}

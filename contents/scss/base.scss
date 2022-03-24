@@ -1,0 +1,141 @@
+@import 'bootstrap-reboot';
+@import 'webfonts/gordita';
+// @import 'webfonts/ibm-plex-mono';
+@import 'webfonts/freight-text';
+@import 'webfonts/atlas-typewriter';
+
+$wrapper-max: 950px;
+$wrapper-wide-max: 1000px;
+$wrapper-width: 84vw;
+$margin-small: 1.5rem;
+
+@mixin small-screen-only {
+   @media (max-width: 800px) {
+	  @content;      
+   }
+}
+
+@mixin medium-screen {
+   @media (min-width: 801px) {
+	  @content;
+   }
+}
+
+@mixin large-screen {
+   @media (min-width: 1300px) {
+	  @content;
+   }
+}
+
+html {
+   font-size: 16px;
+   @include medium-screen {
+	  font-size: 19px;
+   }
+}
+
+body {
+   font-family: "Gordita", system-ui, sans-serif;
+   font-weight: 400;
+   // background-color: #f2f2f2;
+   background-color: white;
+}
+
+$gray: #706a63;
+$text-color: #312e2f;
+$link-color: #1abacd;
+
+$font-stack-mono: "Atlas Typewriter",
+Menlo,
+monospace;
+
+@mixin fonts-headings {
+   font-family: "Freight Text", Georgia, serif;
+   font-style: italic;
+   font-weight: 300;
+}
+
+@mixin button {
+   appearance: none;
+   border: none;
+   background: none;
+   font-family: $font-stack-mono;
+   text-align: center;
+   font-size: 1rem;
+}
+
+@mixin text-heading {
+   @include fonts-headings;
+   font-size: 2.8rem;
+   color: $text-color;
+   @include medium-screen {
+      font-size: 3.5rem;
+   }
+}
+
+.container {
+   max-width: $wrapper-max;
+   margin-left: auto;
+   margin-right: auto;
+   padding-left: $margin-small;
+   padding-right: $margin-small;
+   @include medium-screen {
+	  width: $wrapper-width;
+   }
+   &.wide {
+      max-width: $wrapper-wide-max;
+   }
+}
+
+main.container {
+   padding-top: 5rem;
+   h1 {
+      @include text-heading;
+   }
+   p a, li a {
+      color: $link-color;
+      font-weight: 700;
+   }
+}
+
+#wrapper {
+   position: relative;
+   z-index: 2;
+   background-color: white;
+}
+
+.full-width {
+   width: 100vw;
+	max-width: 100vw;
+	margin-left: calc(50% - 50vw);
+}
+
+p {
+   font-size: 1.15rem;
+   color: #413b3d;
+}
+
+.inline-image {
+   display: inline-block;
+   float: right;
+   max-width: 30%;
+   &.right {
+      margin-left: 2rem;
+      margin-bottom: 2rem;
+   }
+}
+
+button.action {
+   appearance: none;
+   border-radius: 5px;
+   border: none;
+   text-transform: uppercase;
+   font-family: $font-stack-mono;
+   font-weight: 700;
+   color: white;
+   padding: 0.4rem 0.6rem;
+   background-color: #1abacd;
+   &:active {
+      background-color: #0099ab;
+   }
+}

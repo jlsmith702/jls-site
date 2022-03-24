@@ -1,0 +1,17 @@
+{
+  "name": "jls-site",
+  "version": "0.1.0",
+  "description": "Site bootstrapped with Baja",
+  "main": "index.js",
+  "scripts": {
+    "start": "BAJA_WEBPACK_LOCATION=./webpack.cjs BAJA_ACTION=start_server node ./index.js",
+    "build": "webpack --config ./webpack.cjs && BAJA_ACTION=build node ./index.js"
+  },
+  "type": "module",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "baja": "^0.1.2"
+  }
+}
