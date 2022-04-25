@@ -8,10 +8,15 @@ export default function bindProjects(args) {
 	const workItems = container.querySelectorAll('.item');
 	let categories = [];
 	workItems.forEach(item => {
-		const category = item.getAttribute('data-category');
-		if (category && !categories.includes(category)) {
-			categories.push(category);
-		}
+		if( ! item.hasAttribute('data-category') ) return;
+		const categoryString = item.getAttribute('data-category');
+		let categoryArray = categoryString.split(',');
+		categoryArray.forEach( category => {
+			category = category.trim();
+			if (! categories.includes(category)) {
+				categories.push(category);
+			}
+		} )
 	});
 	// Sort
 	categories = categories.sort((a, b) => a.localeCompare(b));
@@ -31,10 +36,22 @@ export default function bindProjects(args) {
 		container.querySelectorAll('.category-button').forEach(thisButton => {
 			thisButton.classList.remove('active');
 		});
+		workItems.forEach( item => {
+			item.setAttribute('data-in-filter', false);
+			if(! item.hasAttribute('data-category') ) return;
+			const categoryString = item.getAttribute('data-category');
+			const categoryArray = categoryString.split(',');
+			categoryArray.forEach( category => {
+				category = category.trim();
+				if( category === categoryName ) {
+					item.setAttribute('data-in-filter', true);
+				}
+			} )
+		});
 		button.classList.add('active');
 		let filter = '*';
 		if (categoryName !== 'All') {
-			filter = `[data-category="${categoryName}"]`;
+			filter = `[data-in-filter="true"]`;
 		}
 		grid.arrange({
 			filter,
@@ -55,7 +72,8 @@ export default function bindProjects(args) {
 		});
 	});
 	container.insertBefore(categoriesEl, container.querySelector('#items'));		
-	selectCategory('All', container.querySelector('[data-category="All"]'));
+	// Select default category
+	selectCategory('Featured', container.querySelector('[data-category="Featured"]'));
 
 	/*
 	 * Show project when clicked

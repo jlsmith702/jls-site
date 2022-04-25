@@ -1,6 +1,6 @@
 title: Meet Me in a Dark Alley
 type: project
-category: Screenwriting
+category: Featured, Screenwriting
 createPage: false
 image: work/meet-me.jpg
 order: 1

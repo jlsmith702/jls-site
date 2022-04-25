@@ -1,6 +1,6 @@
 title: The Weather
 type: project
-category: Radio Play
+category: Featured, Radio Play
 createPage: false
 image: work/the-weather.jpg
 order: 4

@@ -1,6 +1,6 @@
 title: Artifacts
 type: project
-category: Theater
+category: Featured, Theater
 image: work/artifacts.jpg
 createPage: false
 order: 7
