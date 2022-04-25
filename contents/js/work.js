@@ -72,8 +72,6 @@ export default function bindProjects(args) {
 		});
 	});
 	container.insertBefore(categoriesEl, container.querySelector('#items'));		
-	// Select default category
-	selectCategory('Featured', container.querySelector('[data-category="Featured"]'));
 
 	/*
 	 * Show project when clicked
@@ -210,4 +208,7 @@ export default function bindProjects(args) {
 		args.onComplete();
 	}
 	
+	// Select default category
+	selectCategory('Featured', container.querySelector('[data-category="Featured"]'));
+
 }
