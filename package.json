@@ -12,6 +12,6 @@
   "license": "ISC",
   "dependencies": {},
   "devDependencies": {
-    "baja": "^0.1.2"
+    "baja": "^2.2.0"
   }
 }

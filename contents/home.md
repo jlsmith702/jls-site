@@ -17,6 +17,6 @@ id: home
 <div id="work">
 <h2>Work</h2>
 <ul id="items">
-{{query for="project" sortby="order" sort="asc" block="work-item"}}
+{{#query for="project" sortby="order" sort="asc" block="work-item"}}
 </ul>
 </div>
