@@ -4,14 +4,14 @@
   "description": "Site bootstrapped with Surfgreen",
   "main": ".index.js",
   "scripts": {
-    "start": "SURFGREEN_WEBPACK_LOCATION=./.webpack.cjs SURFGREEN_ACTION=start_server node ./.index.js",
-    "build": "webpack --config ./.webpack.cjs && SURFGREEN_ACTION=build node ./.index.js"
+    "start": "SURFGREEN_ACTION=start_server node ./.surfgreen.js",
+    "build": "SURFGREEN_ACTION=build node ./.surfgreen.js"
   },
   "type": "module",
   "author": "",
   "license": "ISC",
   "dependencies": {},
   "devDependencies": {
-    "surfgreen": "^3.0.0"
+    "surfgreen": "^5.0.0"
   }
 }
