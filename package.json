@@ -12,6 +12,6 @@
   "license": "ISC",
   "dependencies": {},
   "devDependencies": {
-    "surfgreen": "^2.2.3"
+    "surfgreen": "^3.0.0"
   }
 }
