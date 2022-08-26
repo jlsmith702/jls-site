@@ -8,4 +8,6 @@ embed: <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https:/
 
 ~~~
 
-A multi-choice adventure filled with dragons, sea witches, dark jokes, and a longing for home. Animated by Mason Sklar. Developed and produced by Austin Heller. Performed by Adrienne Matzen, Nathaniel Andrew, Erin Austin, and Katie Markovich.
+A multi-choice adventure filled with dragons, sea witches, dark jokes, and a longing for home. 
+
+Animated by Mason Sklar. Developed and produced by Austin Heller. Performed by Adrienne Matzen, Nathaniel Andrew, Erin Austin, and Katie Markovich.

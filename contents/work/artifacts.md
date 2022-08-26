@@ -3,7 +3,7 @@ type: project
 category: Featured, Theatre
 image: work/artifacts.jpg
 createPage: false
-order: 7
+order: 2
 
 ~~~
 
