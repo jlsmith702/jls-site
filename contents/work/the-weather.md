@@ -7,4 +7,4 @@ order: 4
 
 ~~~
 
-Content
+"The Weather" was written by Jessy for <a href="https://trapstreet.xyz/">Trap Street</a>'s Radiograph project, an audio series about strange things in real places. Starring Jonathan Baude and Jessy Editing by Amy Carver. Music by Josh Hambrock.
