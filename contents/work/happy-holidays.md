@@ -8,4 +8,4 @@ order: 6
 
 ~~~
 
-Content
+A holiday family newsletter goes seriously awry, much like the year did. Written and performed by Jessy for <a href="https://adventproject.org">The Advent Project</a>. Produced by Austin Heller.

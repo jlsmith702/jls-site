@@ -1,6 +1,6 @@
 title: Liberty City
 type: project
-category: Screenwriting
+category: Screenplay
 image: work/liberty-city.jpg
 createPage: false
 order: 2
@@ -12,4 +12,4 @@ order: 2
 
 Two teenagers grow up in two separate underground bunkers, each believing their city is the last remaining civilization—until a hole in a tunnel wall brings them together. Now, can they bridge the gap between two radically different worlds? Or will this mean war?
 
-<button class="action">Request</button>
+<a href="mailto:jessy.lauren.smith@gmail.com?subject=Screenplay request"><button class="action">Request</button></a>

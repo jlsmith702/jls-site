@@ -8,4 +8,4 @@ embed: <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https:/
 
 ~~~
 
-Content
+A toy theater puppet show, handmade and performed by Jessy for <a href="https://adventproject.org>The Advent Project</a>. Character illustration by Amalia Dapkiewicz and music by Smallhounds.
