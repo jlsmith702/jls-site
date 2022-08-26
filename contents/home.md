@@ -10,7 +10,7 @@ id: home
 </header>
 
 <div id="intro">
-<p>Jessy Lauren Smith is a writer from a lot of places who now mostly lives in LA. She specializes in screenplays, scripted podcasts, site-based theatre, and multiple-choice storytelling. She's been a finalist or semifinalist for a whole slew of things, and her screenplay Meet Me in a Dark Alley was in the top 10% of entries for last year's Nicholl Fellowship.<a href="{{siteBase}}/about">Read more &raquo;</a></p>
+<p>Jessy Lauren Smith is a writer from a lot of places who now mostly lives in LA. She specializes in screenplays, scripted podcasts, site-based theatre, and multiple-choice storytelling. She's been a finalist or semifinalist for a whole slew of things, and her screenplay Meet Me in a Dark Alley was in the top 10% of entries for last year's Nicholl Fellowship. <a href="{{siteBase}}/about">Read more &raquo;</a></p>
 </div>
 
 
