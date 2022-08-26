@@ -1,6 +1,6 @@
 title: Into December
 type: project
-category: Short Film
+category: Short Films
 image: work/into-december.jpg
 createPage: false
 order: 3

@@ -1,6 +1,6 @@
 title: The Weather
 type: project
-category: Featured, Scripted Podcast
+category: Featured, Scripted Podcasts
 createPage: false
 image: work/the-weather.jpg
 order: 4

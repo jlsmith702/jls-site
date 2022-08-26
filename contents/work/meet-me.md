@@ -1,6 +1,6 @@
 title: Meet Me in a Dark Alley
 type: project
-category: Featured, Screenplay
+category: Featured, Screenplays
 createPage: false
 image: work/meet-me.jpg
 order: 1

@@ -1,6 +1,6 @@
 title: Liberty City
 type: project
-category: Screenplay
+category: Screenplays
 image: work/liberty-city.jpg
 createPage: false
 order: 2

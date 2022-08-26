@@ -1,6 +1,6 @@
 title: Points of View
 type: project
-category: Scripted Podcast
+category: Scripted Podcasts
 image: work/points-of-view.jpg
 createPage: false
 embed: <img src="{{siteBase}}/work/points-of-view.jpg"><audio src="{{siteBase}}/work/points-of-view.mp3" controls>
