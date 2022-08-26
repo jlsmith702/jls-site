@@ -4,6 +4,7 @@ category: Featured, Radio Play
 createPage: false
 image: work/the-weather.jpg
 order: 4
+embed: <img src="{{siteBase}}/work/the-weather.jpg"><audio src="{{siteBase}}/work/the-weather.mp3" controls>
 
 ~~~
 

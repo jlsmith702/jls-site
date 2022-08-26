@@ -230,6 +230,9 @@ $item-padding-medium: 3rem;
 			   }
 			   .embed {
 				  display: block;
+				  audio {
+					  width: 100%;
+				  }
 			   }
 			}
 			
