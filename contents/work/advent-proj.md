@@ -3,7 +3,7 @@ type: project
 category: Featured
 image: work/advent-proj.jpg
 createPage: false
-order: 8
+order: 10
 embed: <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/587029521?h=ab2c6c2c4f" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="The Advent Project"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 
 ~~~
