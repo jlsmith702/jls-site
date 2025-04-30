@@ -1,7 +1,7 @@
 title: Living Room Playmakers
 type: project
 category: Featured, Theatre
-image: work/one-trick-2.jpg
+image: work/one-trick-1-crop.jpg
 createPage: false
 order: 5
 
