@@ -14,4 +14,4 @@ Jessy is a founding member of Living Room Playmakers, a playwright-driven collec
 
 She holds an MFA from Northwestern University, in the palm of her hand, for an hour each day.
 
-You can find her on Instagram as @jessylaursmith.
+You can find her on Instagram as <a href="https://instagram.com/jessylaursmith" @jessylaursmith.
