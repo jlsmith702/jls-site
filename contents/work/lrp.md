@@ -1,7 +1,7 @@
 title: Living Room Playmakers
 type: project
 category: Featured, Theatre
-image: work/one-trick-1.jpg, work/Refinished-Tech-This-One-1.JPG
+image: work/one-trick-1.jpg
 createPage: false
 order: 5
 
